@@ -3,8 +3,8 @@
   connection: local
   vars:
    WISHES: morning-from-play
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   vars_prompt:
   - name: WISHES
     prompt: Enter wishes
@@ -19,3 +19,4 @@
 
      #1.first variable executed from args
      #2. executed from task
+     #3.executed from file
