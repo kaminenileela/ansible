@@ -1,0 +1,9 @@
+- name: conditions
+  hosts: local
+  tasks:
+  - name: user exist or not
+    ansible.builtin.command: id expense
+
+  - name: say hello
+    ansible.builtin.debug:
+      msg: "Hello"
