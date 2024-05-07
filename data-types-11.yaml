@@ -1,6 +1,6 @@
 - name: data types
   hosts: local
-  connection: local
+  #connection: local
   vars:
     Course: DevOps with AWS
     Tools:
@@ -11,7 +11,7 @@
       DevOps: 3
       AWS: 2
       Docker: 1
-    Real Project: true
+    RealProject: true
   tasks:
   - name: print vriables
     ansible.builtin.debug:
