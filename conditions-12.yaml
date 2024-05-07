@@ -12,6 +12,12 @@
     ansible.builtin.debug:
       msg: "User info: {{USER}}"
 
+  - name: Create user
+    community.general.bsd_user:
+      name: expense
+      state: present
+      when: USER.rc != 0 #condition
+
   - name: say hello
     ansible.builtin.debug:
       msg: "Hello"
