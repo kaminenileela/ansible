@@ -1,5 +1,6 @@
 - name: variable preference
-  hosts: localhost
+  hosts: local
+  connection: local
   vars:
    WISHES: morning-from-play
   vars_files:
