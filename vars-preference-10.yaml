@@ -3,12 +3,12 @@
   connection: local
   vars:
    WISHES: morning-from-play
-  # vars_files:
-  # - vars.yaml
-  vars_prompt:
-  - name: WISHES
-    prompt: Enter wishes
-    private: false
+  vars_files:
+  - vars.yaml
+  # vars_prompt:
+  # - name: WISHES
+  #   prompt: Enter wishes
+  #   private: false
    
   tasks:
   - name: variable from play
@@ -20,3 +20,4 @@
      #1.first variable executed from args
      #2. executed from task
      #3.executed from file
+     #4.prompt
