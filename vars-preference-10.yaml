@@ -1,6 +1,7 @@
 - name: variable preference
-  hosts: local
-  connection: local
+  # hosts: localhost #for executing on windows
+  hosts: local #for executing on mac
+  connection: local #for executing on mac
   # vars:
   #  WISHES: morning-from-play
   vars_files:
