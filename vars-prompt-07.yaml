@@ -1,0 +1,8 @@
+- name: variables from prompt
+  hosts: web
+  vars_prompt
+  
+  tasks:
+  - name: using variable from file
+    ansible.builtin.debug:
+     msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}

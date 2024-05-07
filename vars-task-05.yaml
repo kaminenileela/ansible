@@ -1,0 +1,18 @@
+- name: variable from play
+  hosts: local host
+  vars: #play level variable
+   course: Terraform
+   trainer: siva
+   duration: 15hrs
+  tasks:
+  - name: task level variable
+    vars: #task level variable overriding play level variable
+     course: Devops 
+    ansible.builtin.debug:
+     msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}
+
+- name: using play level variable 
+  ansible.builtin.debug:
+   msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}
+
+

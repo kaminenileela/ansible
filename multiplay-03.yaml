@@ -2,13 +2,13 @@
   hosts: localhost #means cureent using server
   tasks:
   - name: multiplay TASK1
-     ansible.builtin.debug:
-     msg: This is from PLAY1 and TASK1
+    ansible.builtin.debug:
+     msg: "Hello! This is from PLAY1 and TASK1"
 
 
 - name: multiple tasks PLAY2
   hosts: localhost
   tasks:
   - name: multiplay TASK1
-     ansible.builtin.debug:
-     msg: This is from PLAY2 and TASK1
+    ansible.builtin.debug:
+     msg: Hello! This is from PLAY2 and TASK1
