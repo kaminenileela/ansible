@@ -1,8 +1,12 @@
 - name: conditions
   hosts: local
+  become: yes
   tasks:
   - name: user exist or not
     ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: true
+
 
   - name: say hello
     ansible.builtin.debug:
