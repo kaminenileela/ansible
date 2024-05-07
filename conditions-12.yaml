@@ -13,7 +13,7 @@
       msg: "User info: {{USER}}"
 
   - name: Create user
-    community.general.bsd_user:
+    ansible.builtin.user:
       name: expense
       password: "{{ 'expense123' | password_hash('sha512') }}"
       state: present
