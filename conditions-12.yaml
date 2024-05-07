@@ -1,9 +1,10 @@
 - name: conditions
   hosts: local
+  connection: local
   become: yes
   tasks:
   - name: user exist or not
-    ansible.builtin.command: dscl . -read /Users/username
+    ansible.builtin.command: id expense
     register: USER
     ignore_errors: true
 
