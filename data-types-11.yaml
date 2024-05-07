@@ -15,4 +15,4 @@
   tasks:
   - name: print vriables
     ansible.builtin.debug:
-      msg: course: "{{Course}}," Tools covered: "{{Tools}},"  Experience is: "{{Experience}}," is real project: "{{RealProject}}"
+      msg: "course: {{Course}}, Tools covered: {{Tools}},  Experience is: {{Experience}}, is real project: {{RealProject}}"
