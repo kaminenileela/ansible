@@ -15,7 +15,9 @@
   - name: Create user
     community.general.bsd_user:
       name: expense
+      password: "{{ 'expense123' | password_hash('sha512') }}"
       state: present
+      #groups: admin
       when: USER.rc != 0 #condition
 
   - name: say hello
