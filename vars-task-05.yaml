@@ -1,5 +1,5 @@
 - name: variable from play
-  hosts: local host
+  hosts: localhost
   vars: #play level variable
    course: Terraform
    trainer: siva
