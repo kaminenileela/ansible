@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: user exist or not
-    ansible.builtin.command: id expense
+    ansible.builtin.command: dscl . -read /Users/username
     register: USER
     ignore_errors: true
 
