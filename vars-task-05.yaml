@@ -11,8 +11,8 @@
     ansible.builtin.debug:
      msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}
 
-- name: using play level variable 
-  ansible.builtin.debug:
-   msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}
+  - name: using play level variable 
+    ansible.builtin.debug:
+     msg: Hi, Iam learning {{course}} from trainer {{trainer}}.Duration is {{duration}}
 
 
