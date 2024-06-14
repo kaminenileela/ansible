@@ -1,17 +1,17 @@
 - name: data types
-  hosts: local
+  hosts: localhost
   #connection: local
   vars:
-    Course: DevOps with AWS
-    Tools:
+    Course: DevOps with AWS #string
+    Tools: #list
     - linux
     - shell
     - ansible
-    Experience:
-      DevOps: 3
+    Experience: #map or dictionary
+      DevOps: 3 #number
       AWS: 2
       Docker: 1
-    RealProject: true
+    RealProject: true #boolean
   tasks:
   - name: print vriables
     ansible.builtin.debug:
