@@ -16,4 +16,4 @@ connect with SSH
 - ansible -i inventory.ini web --list-hosts (to list all available hosts)
 - ansible -i inventory.ini all --list-hosts (to list all hosts available in group all)
 
-* In ansible we cant create functions. we can use existing filters.
+* In ansible we cant create functions. we can use existing filters. filetr is represented by | (pipe)
