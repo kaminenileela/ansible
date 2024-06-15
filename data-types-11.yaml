@@ -1,6 +1,5 @@
 - name: data types
   hosts: localhost
-  #connection: local
   vars:
     Course: DevOps with AWS #string
     Tools: #list

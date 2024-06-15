@@ -1,0 +1,71 @@
+- name: default value
+  hosts: localhost
+  tasks:
+  - name: print default value
+    ansible.builtin.debug:
+      msg: "Hello {{course | default('Ansible')}}" #if user forgot to pass variable course we are setting filter to pass default variable as Ansible
+
+- name: upper case
+  hosts: localhost
+  vars:
+   greeting: "Hello, Good Morning"
+  tasks:
+  - name: converting to upper case
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
+
+- name: lower case
+  hosts: localhost
+  vars:
+   greeting: "Hello, Good Morning"
+  tasks:
+  - name: converting to lower case
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
+
+- name: remove duplicates
+  hosts: localhost
+  vars:
+   numbers: [1, 2, 3, 3, 4, 4, 4, 5]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"    
+
+- name: print min and max
+  hosts: localhost
+  vars:
+   ages: [14,25,45,60,85]
+  tasks:
+  - name: print min age and max age
+    ansible.builtin.debug:
+      msg: "min age: {{ ages | min }}, max age: {{ ages | max }}"
+
+#dictionary to items(list)
+- name: converting dictionary to items/list
+  hosts: localhost
+  vars:
+   my_dict: #this is called as dictionary or map or key/value pairs.
+    Course: Ansible
+    Trainer: Leela
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert {{ my_dict }}"
+  - name: After convert
+    ansible.builtin.debug:
+      msg: "After convert {{ my_dict | dict2items }}" 
+- name: convert items to dictionary
+  hosts: localhost
+  vars:
+    my_list:
+    - {'key': 'Course', 'value': 'Ansible'}
+    - {'key': 'Trainer', 'value': 'Leela'}
+    - {'key': 'Duration', 'value': '120 hr'}
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert {{ my_list }}"
+  - name: After convert
+    ansible.builtin.debug:
+      msg: "After convert {{ my_list | items2dict }}"

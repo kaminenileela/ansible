@@ -14,7 +14,7 @@
   tasks:
   - name: variable from play
     # vars:
-    #  WISHES: morning-from-task
+    # WISHES: morning-from-task
     ansible.builtin.debug:
      msg: Hello! Good {{WISHES}}
 
