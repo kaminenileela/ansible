@@ -4,6 +4,7 @@
   - name: get from args
     ansible.builtin.debug:
      msg: Hello {{PERSON}}, Good {{WISHES}} #when we want to give variable as arguments when running the file we need to pass as below:
-     #ansible-playbook vars-args-09.yaml --extravars "PERSON=ramesh WISHES=Morning" or
-     #ansible-playbook vars-args-09.yaml -e "PERSON=ramesh WISHES=Morning" or
-     #ansible-playbook vars-args-09.yaml -e PERSON=ramesh -e WISHES=Morning
+     # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 vars-args-09.yaml --extra-vars "PERSON=ramesh WISHES=Morning" or
+     # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 vars-args-09.yaml -e "PERSON=ramesh WISHES=Morning" or
+     #ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 vars-args-09.yaml -e PERSON=ramesh -e WISHES=Morning
+

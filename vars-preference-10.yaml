@@ -2,19 +2,19 @@
   hosts: localhost #for executing on windows
   # hosts: local #for executing on mac
   # connection: local #for executing on mac
-  # vars:
-  #  WISHES: morning-from-play
+  vars:
+   WISHES: morning-from-play
   vars_files:
   - vars.yaml
-  # vars_prompt:
-  # - name: WISHES
-  #   prompt: Enter wishes
-  #   private: false
+  vars_prompt:
+  - name: WISHES
+    prompt: Enter wishes
+    private: false
    
   tasks:
   - name: variable from play
-    # vars:
-    # WISHES: morning-from-task
+    vars:
+    WISHES: morning-from-task
     ansible.builtin.debug:
      msg: Hello! Good {{WISHES}}
 
