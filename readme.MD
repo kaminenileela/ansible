@@ -16,4 +16,10 @@ connect with SSH
 - ansible -i inventory.ini web --list-hosts (to list all available hosts)
 - ansible -i inventory.ini all --list-hosts (to list all hosts available in group all)
 
-* In ansible we cant create functions. we can use existing filters. filetr is represented by | (pipe)
+* In ansible we cant create functions. we can use existing filters. filter is represented by | (pipe)
+
+# Ansible Shell vs Ansible comand module
+* shell module - it will use shell environment, means we can use redirections >, pipes | and other shell variables. If you want to run shell script ansible or comples commands with redirections then use shell module. 
+* command module - it will just run the commands, but can't use shell environment like >, pipe | or variables.
+If simple plain command without variables, redirections, pipes etc. we can use command module
+
