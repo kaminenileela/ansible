@@ -15,7 +15,7 @@ connect with SSH
 * run playbook as below
 - ansible -i inventory.ini web --list-hosts (to list all available hosts)
 - ansible -i inventory.ini all --list-hosts (to list all hosts available in group all)
--- ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <yaml-file-name> 
+- ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <yaml-file-name> 
 
 * In ansible we cant create functions. we can use existing filters. filter is represented by | (pipe)
 
