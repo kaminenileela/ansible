@@ -6,10 +6,10 @@
    WISHES: morning-from-play
   vars_files:
   - vars.yaml
-  vars_prompt:
-  - name: WISHES
-    prompt: Enter wishes
-    private: false
+  # vars_prompt:
+  # - name: WISHES
+  #   prompt: Enter wishes
+  #   private: false
    
   tasks:
   - name: variable from play
