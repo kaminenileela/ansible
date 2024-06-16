@@ -14,9 +14,9 @@
   tasks:
   - name: variable from play
     vars:
-    WISHES: morning-from-task
+      WISHES: morning-from-task
     ansible.builtin.debug:
-     msg: Hello! Good {{WISHES}}
+      msg: Hello! Good {{WISHES}}
 
      #1.first variable executed from args
      #2. executed from task
